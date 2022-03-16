@@ -6,4 +6,7 @@ export const BannerMainWrapper = styled.div`
   height: 400px;
   position: relative;
   background-image: url(${Banner});
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
 `;
