@@ -1,7 +1,12 @@
-import { FC } from "react";
+import { FC } from 'react';
+import Banner from '../banner/Banner';
 
 const Main: FC = () => {
-  return <div>Hi</div>;
+  return (
+    <>
+      <Banner />
+    </>
+  );
 };
 
 export default Main;
