@@ -1,7 +1,7 @@
 import { FC } from "react";
-import {Banner} from "../../"
+import * as S from "./style";
 
-const Header:FC = () => {
+const Header: FC = () => {
   return <div></div>;
 };
 
