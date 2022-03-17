@@ -9,6 +9,7 @@ export const HeaderParentContainer = styled.div`
   height: 70px;
   position: fixed;
   top: 0;
+  z-index: 10;
 `;
 
 export const Header = styled.div<Props>`
@@ -16,8 +17,8 @@ export const Header = styled.div<Props>`
   height: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ffffff;
-  transition: 0.354s;
+  border-bottom: 2px solid ${(props) => (props.theme === 'black' ? '#272727' : '#ffffff')};
+  transition: 0.154s;
 
   background-color: ${(props) => (props.theme === 'white' ? 'transparent' : 'white')};
   cursor: pointer;
