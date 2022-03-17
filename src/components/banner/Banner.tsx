@@ -3,6 +3,7 @@ import { FC, useEffect, useMemo, useState } from 'react';
 import * as S from './style';
 import Header from '../header/Header';
 import { throttle } from 'lodash';
+import { Link } from 'react-router-dom';
 
 const Banner: FC = () => {
   const [themeState, setThemeState] = useState('white');
@@ -29,6 +30,11 @@ const Banner: FC = () => {
   return (
     <S.BannerMainWrapper>
       <Header theme={themeState} />
+      <S.SlideContainer>
+        <Link to="/">
+          <button>후보자들 공약 비교하기</button>
+        </Link>
+      </S.SlideContainer>
     </S.BannerMainWrapper>
   );
 };
