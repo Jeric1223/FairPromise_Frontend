@@ -3,34 +3,19 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}; 
-
-  @font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 100;
-  src: url("styles/fonts/NanumSquare_acL.ttf")
-}
-
-@font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: normal;
-  src: url("styles/fonts/NanumSquare_acR.ttf")
-}
-
-@font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 500;
-  src: url("styles/fonts/NanumSquare_acB")
-}
-
-@font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: bold;
-  src: url("styles/fonts/NanumSquare_acEB.ttf")
-}
+  body, html {
+    width: 100%;
+    min-width: 768px;
+  }
+  button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;
+  }  
 `;
 
 export default GlobalStyle;
