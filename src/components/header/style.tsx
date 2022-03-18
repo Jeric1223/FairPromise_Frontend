@@ -17,12 +17,12 @@ export const Header = styled.div<Props>`
   height: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid ${(props) => (props.theme === 'black' ? '#272727' : '#ffffff')};
-  transition: 0.154s;
-
-  background-color: ${(props) => (props.theme === 'white' ? 'transparent' : 'white')};
+  transition: 0.234s;
   cursor: pointer;
   gap: 75px;
+  
+  background-color: ${(props) => (props.theme === 'white' ? 'transparent' : 'white')};
+  border-bottom: 2px solid ${(props) => (props.theme === 'black' ? '#272727' : '#ffffff')};
 
   & > a {
     text-decoration: none;
