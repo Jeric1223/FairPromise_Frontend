@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import * as S from './style';
-import { huboList } from '../../../constance/data';
 
 const HuboInfomation: FC = () => {
   return (
