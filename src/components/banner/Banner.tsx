@@ -11,13 +11,12 @@ const Banner: FC = () => {
   const handlerScroll = useMemo(
     () =>
       throttle(() => {
-        console.log(window.scrollY);
-        if (window.scrollY >= 58) {
+        if (window.scrollY >= 30) {
           setThemeState('black');
-        } else if (window.scrollY < 58) {
+        } else if (window.scrollY < 30) {
           setThemeState('white');
         }
-      }, 300),
+      }, 200),
     [themeState],
   );
 
