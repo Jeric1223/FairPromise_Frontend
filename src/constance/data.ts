@@ -5,6 +5,7 @@ export const huboList = [
     name: '이재명',
     jd_name: '더불어민주당',
     color: '#3F69FF',
+    slogan: '위기에 강한\n유능한 경제 대통령',
   },
   {
     huboid: '100138362',
@@ -12,6 +13,7 @@ export const huboList = [
     name: '윤석열',
     jd_name: '국민의힘',
     color: '#E61E2B',
+    slogan: '국민이 키운 윤석열\n내일을 바꾸는 대통령',
   },
   {
     huboid: '100138383',
@@ -19,6 +21,7 @@ export const huboList = [
     name: '심상정',
     jd_name: '정의당',
     color: '#FFED00',
+    slogan: '주4일제\n복지국가',
   },
   {
     huboid: '100138392',
@@ -33,6 +36,7 @@ export const huboList = [
     name: '오준호',
     jd_name: '기본소득당',
     color: '#19233C',
+    slogan: '누구나 기본소득\n나답게 대한민국',
   },
   {
     huboid: '100138378',
@@ -40,6 +44,7 @@ export const huboList = [
     name: '허경영',
     jd_name: '국가혁명당',
     color: '#DB2C2B',
+    slogan: '국민 배당금 지급!\n가계부채 탕감!',
   },
   {
     huboid: '100138411',
@@ -47,6 +52,7 @@ export const huboList = [
     name: '이백윤',
     jd_name: '노동당',
     color: '#FF0000',
+    slogan: '계속 이렇게 살거야?\n바꾸고 싶다면\n사회주의',
   },
   {
     huboid: '100138489',
@@ -54,6 +60,7 @@ export const huboList = [
     name: '옥은호',
     jd_name: '새누리당',
     color: '#C9252B',
+    
   },
   {
     huboid: '100138373',
