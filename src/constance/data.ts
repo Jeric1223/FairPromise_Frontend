@@ -20,8 +20,8 @@ export const huboList = [
     giho: 3,
     name: '심상정',
     jd_name: '정의당',
-    color: '#FFED00',
-    slogan: '주4일제\n복지국가',
+    color: '#f5e730',
+    slogan: '노동의 희망\n시민의 꿈',
   },
   {
     huboid: '100138392',
@@ -53,7 +53,7 @@ export const huboList = [
     name: '이백윤',
     jd_name: '노동당',
     color: '#FF0000',
-    slogan: '계속 이렇게 살거야?\n바꾸고 싶다면\n사회주의',
+    slogan: '계속 이렇게 살거야?\n바꾸고 싶다면 사회주의',
   },
   {
     huboid: '100138489',
@@ -77,7 +77,7 @@ export const huboList = [
     name: '김경재',
     jd_name: '신자유민주연합',
     color: '#AD469F',
-    slogan: '박근혜 대통령 명예회복\n민생안정',
+    slogan: '박근혜 대통령\n 명예회복 민생안정',
   },
   {
     huboid: '100138379',
@@ -101,7 +101,7 @@ export const huboList = [
     name: '이경희',
     jd_name: '통일한국당',
     color: '#003793',
-    slogan: "오직 경제, 오직 통일!\n청년사업가, 법학박사"
+    slogan: '오직 경제, 오직 통일!\n청년사업가, 법학박사',
   },
   {
     huboid: '100138402',
@@ -109,6 +109,6 @@ export const huboList = [
     name: '김민찬',
     jd_name: '한류연합당',
     color: '#733A87',
-    slogan: "국가를 지키고 국민을 보호하겠습니다\n새로운 시대! 새로운 나라! 새로운 사람"
+    slogan: '국가를 지키고\n국민을 보호하겠습니다',
   },
 ];
