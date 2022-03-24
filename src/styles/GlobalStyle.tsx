@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     width: 100%;
     min-width: 768px;
-  }
+  } 
   button {
     background: inherit;
     border: none;
