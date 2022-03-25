@@ -1,24 +1,45 @@
-import { FC } from 'react';
+import { FC, useMemo, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../header/Header';
 import SloganBanner from './sloganBanner/SloganBanner';
 import { huboList } from '../../constance/data';
+import HuboInformation from './hunoInformation/HuboInformation';
 import QueryString from 'qs';
+import { throttle } from 'lodash';
 
 const HuboDetail: FC = () => {
   const location = useLocation();
   const queryData = QueryString.parse(location.search, { ignoreQueryPrefix: true });
+  const [zIndex, setZIndex] = useState(10);
 
-  console.log(queryData);
+  const handlerScroll = useMemo(
+    () =>
+      throttle(() => {
+        if (window.scrollY >= 10) {
+          setZIndex(101);
+        } else if (window.scrollY < 10) {
+          setZIndex(10);
+        }
+      }, 200),
+    [],
+  );
+
+  useEffect(() => {
+    window.addEventListener('scroll', handlerScroll);
+    return () => {
+      window.removeEventListener('scroll', handlerScroll);
+    };
+  }, [handlerScroll]);
 
   return (
     <>
-      <Header theme={'black'}></Header>
+      <Header theme={'black'} zIndex={zIndex}></Header>
       {huboList.map((value, index) => {
         if (String(value.giho) === queryData.id) {
           return <SloganBanner key={index} huboinfo={value} />;
         }
       })}
+      <HuboInformation />
     </>
   );
 };
