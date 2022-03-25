@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import * as S from './style';
 import { LogoSvg, LogoBlackSvg } from '../../assets';
 import { Link } from 'react-router-dom';
