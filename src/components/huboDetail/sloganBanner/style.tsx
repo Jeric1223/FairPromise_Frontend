@@ -54,7 +54,7 @@ export const RightWrapper = styled.div<gihoProps>`
 `;
 
 export const HuboImageList = styled.div<gihoProps>`
-  width: ${(props) => (props.giho == 6 ? '420px' : '368px')} 368px;
+  width: ${(props) => (props.giho == 6 ? '420px' : '368px')};
   height: 510px;
   position: absolute;
   top: -60px;
