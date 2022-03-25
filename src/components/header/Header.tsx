@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 
 interface Props {
   theme: string;
+  zIndex: number;
 }
 
 const Header: FC<Props> = (props) => {
-  const { theme } = props;
+  const { theme, zIndex } = props;
 
   return (
-    <S.HeaderParentContainer>
+    <S.HeaderParentContainer zIndex={zIndex}>
       <S.Header theme={theme}>
         {theme === 'white' ? (
           <Link to="/">
