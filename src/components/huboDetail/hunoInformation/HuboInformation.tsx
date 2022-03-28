@@ -1,7 +1,14 @@
 import { FC } from 'react';
 import * as S from './style';
+import TextDetail from './TextDetail';
 
-const HuboInformation: FC = () => {
+interface Props {
+  huboinfo: any;
+}
+
+const HuboInformation: FC<Props> = (props) => {
+  const { huboinfo } = props;
+  console.log(huboinfo);
   return (
     <>
       <S.FlexCenterWrapper>
@@ -10,14 +17,14 @@ const HuboInformation: FC = () => {
           <span>상세 프로필</span>
         </S.IntroduceLine>
         <S.InfomationContainer>
-          <div>
-            {/*             <h3>이름</h3>
-            <h3>직업</h3>
-            <h3>출생</h3>
-            <h3>사저</h3>
-            <h3>경력</h3>
-            <h3>학력</h3> */}
-          </div>
+          <S.TextFlexBox>
+            <TextDetail title={'이름'} text={`${huboinfo.NAME}(${huboinfo.HANJA_NAME})`} />
+            <TextDetail title={'사저'} text={`${huboinfo.ADDR}`} />
+            <TextDetail title={'이름'} text="윤석열" />
+            <TextDetail title={'이름'} text="윤석열" />
+            <TextDetail title={'이름'} text="윤석열" />
+            <TextDetail title={'이름'} text="윤석열" />
+          </S.TextFlexBox>
           <div id="line" />
         </S.InfomationContainer>
       </S.FlexCenterWrapper>

@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Header from '../header/Header';
 import SloganBanner from './sloganBanner/SloganBanner';
 import { huboList } from '../../constance/data';
+import { huboInfo } from '../../constance/huboinfo';
 import HuboInformation from './hunoInformation/HuboInformation';
 import QueryString from 'qs';
 import { throttle } from 'lodash';
@@ -39,7 +40,12 @@ const HuboDetail: FC = () => {
           return <SloganBanner key={index} huboinfo={value} />;
         }
       })}
-      <HuboInformation />
+      {huboInfo.map((value, index) => {
+        if (value.GIHO === queryData.id) {
+          console.log(value.HUBOID);
+          return <HuboInformation key={index} huboinfo={value} />;
+        }
+      })}
     </>
   );
 };
