@@ -1,4 +1,4 @@
-export const hunoInfo = [
+export const huboInfo = [
   {
     NUM: '1',
     HUBOID: '100138381',
