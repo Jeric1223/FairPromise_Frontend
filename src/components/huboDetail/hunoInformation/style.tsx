@@ -46,7 +46,7 @@ export const TextFlexBox = styled.div`
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  gap: 55px 0j;
+  gap: 55px 0;
   margin: 20px 0 40px 0;
 `;
 
