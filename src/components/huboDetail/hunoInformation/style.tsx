@@ -35,19 +35,19 @@ export const InfomationContainer = styled.article`
   align-items: center;
 
   & > #line {
-    width: 1000px;
+    width: 900px;
     height: 2px;
     background-color: #dbdce1;
   }
 `;
 
 export const TextFlexBox = styled.div`
-  padding-left: 40px;
+  padding-left: 220px;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
   gap: 55px 0;
-  margin: 20px 0 40px 0;
+  margin: 20px 0 45px 0;
 `;
 
 export const TextDetail = styled.div`
@@ -65,5 +65,7 @@ export const TextDetail = styled.div`
     font-size: 22px;
     color: rgba(00, 00, 00, 70%);
     margin-left: 20px;
+    white-space: pre-wrap;
+    line-height: 30px;
   }
 `;
