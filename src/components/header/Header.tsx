@@ -1,18 +1,18 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import * as S from './style';
 import { LogoSvg, LogoBlackSvg } from '../../assets';
 import { Link } from 'react-router-dom';
 
 interface Props {
   theme: string;
+  zIndex: number;
 }
 
 const Header: FC<Props> = (props) => {
-  const { theme } = props;
+  const { theme, zIndex } = props;
 
   return (
-    <S.HeaderParentContainer>
+    <S.HeaderParentContainer zIndex={zIndex}>
       <S.Header theme={theme}>
         {theme === 'white' ? (
           <Link to="/">

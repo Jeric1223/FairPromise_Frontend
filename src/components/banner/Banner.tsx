@@ -11,12 +11,12 @@ const Banner: FC = () => {
   const handlerScroll = useMemo(
     () =>
       throttle(() => {
-        if (window.scrollY >= 500) {
+        if (window.scrollY >= 30) {
           setThemeState('black');
-        } else if (window.scrollY < 500) {
+        } else if (window.scrollY < 30) {
           setThemeState('white');
         }
-      }, 300),
+      }, 200),
     [themeState],
   );
 
@@ -29,7 +29,7 @@ const Banner: FC = () => {
 
   return (
     <S.BannerMainWrapper>
-      <Header theme={themeState} />
+      <Header theme={themeState} zIndex={10} />
       <S.SlideContainer>
         <Link to="/">
           <button>후보자들 공약 비교하기</button>
