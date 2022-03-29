@@ -42,7 +42,6 @@ const HuboDetail: FC = () => {
       })}
       {huboInfo.map((value, index) => {
         if (value.GIHO === queryData.id) {
-          console.log(value.HUBOID);
           return <HuboInformation key={index} huboinfo={value} />;
         }
       })}

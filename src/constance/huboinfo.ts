@@ -189,6 +189,7 @@ export const huboInfo = [
   {
     NUM: '12',
     JD_NAME: '진보당',
+    GIHO: '12',
     NAME: '김재연',
     HANJA_NAME: '金在姸',
     GENDER: '여',
