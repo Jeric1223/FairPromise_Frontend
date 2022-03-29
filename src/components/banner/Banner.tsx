@@ -29,7 +29,7 @@ const Banner: FC = () => {
 
   return (
     <S.BannerMainWrapper>
-      <Header theme={themeState} />
+      <Header theme={themeState} zIndex={10} />
       <S.SlideContainer>
         <Link to="/">
           <button>후보자들 공약 비교하기</button>
