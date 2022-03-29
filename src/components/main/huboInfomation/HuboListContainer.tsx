@@ -7,10 +7,10 @@ import { huboList } from '../../../constance/data';
 const HuboListContainer: FC = () => {
   return (
     <S.HuboListFlexContainer>
-      {huboList.map((item) => {
+      {huboList.map((item, index) => {
         if (item.color === '사퇴') return;
         else {
-          return <HuboList name={item.name} dang={item.jd_name} number={item.giho} color={item.color} />;
+          return <HuboList key={index} name={item.name} dang={item.jd_name} number={item.giho} color={item.color} />;
         }
       })}
     </S.HuboListFlexContainer>

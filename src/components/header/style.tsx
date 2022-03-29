@@ -4,12 +4,12 @@ interface Props {
   theme: 'string';
 }
 
-export const HeaderParentContainer = styled.div`
+export const HeaderParentContainer = styled.div<{ zIndex: number }>`
   width: 100%;
   height: 70px;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: ${(props) => props.zIndex};
 `;
 
 export const Header = styled.div<Props>`
@@ -20,7 +20,7 @@ export const Header = styled.div<Props>`
   transition: 0.234s;
   cursor: pointer;
   gap: 75px;
-  
+
   background-color: ${(props) => (props.theme === 'white' ? 'transparent' : 'white')};
   border-bottom: 2px solid ${(props) => (props.theme === 'black' ? '#272727' : '#ffffff')};
 

@@ -17,3 +17,8 @@
   font-family: 'NanumSquare EB';
   src: url('./styles/fonts/NanumSquare_acEB.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Typo_S';
+  src: url('./styles/fonts/Typo_S.ttf') format('truetype');
+}

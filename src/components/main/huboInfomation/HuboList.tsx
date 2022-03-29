@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import * as S from './style';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   name: string;
@@ -10,8 +11,14 @@ interface Props {
 
 const HuboList: FC<Props> = (props) => {
   const { name, dang, number, color } = props;
+  const navigate = useNavigate();
   return (
-    <S.HuboListContainer color={color}>
+    <S.HuboListContainer
+      color={color}
+      onClick={() => {
+        navigate(`/hubo-detail?id=${number}`);
+      }}
+    >
       <S.HuboImageWrapper>
         <img src={require(`../../../assets/image/${name}.svg`)} alt="후보 사진" />
       </S.HuboImageWrapper>

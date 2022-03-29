@@ -5,6 +5,7 @@ export const huboList = [
     name: '이재명',
     jd_name: '더불어민주당',
     color: '#3F69FF',
+    slogan: '위기에 강한\n유능한 경제 대통령',
   },
   {
     huboid: '100138362',
@@ -12,13 +13,15 @@ export const huboList = [
     name: '윤석열',
     jd_name: '국민의힘',
     color: '#E61E2B',
+    slogan: '국민이 키운 윤석열\n내일을 바꾸는 대통령',
   },
   {
     huboid: '100138383',
     giho: 3,
     name: '심상정',
     jd_name: '정의당',
-    color: '#FFED00',
+    color: '#f5e730',
+    slogan: '노동의 희망\n시민의 꿈',
   },
   {
     huboid: '100138392',
@@ -26,6 +29,7 @@ export const huboList = [
     name: '안철수',
     jd_name: '국민의당',
     color: '사퇴',
+    slogan: '과학경제강국\n바르고 깨끗한',
   },
   {
     huboid: '100138395',
@@ -33,6 +37,7 @@ export const huboList = [
     name: '오준호',
     jd_name: '기본소득당',
     color: '#19233C',
+    slogan: '누구나 기본소득\n나답게 대한민국',
   },
   {
     huboid: '100138378',
@@ -40,6 +45,7 @@ export const huboList = [
     name: '허경영',
     jd_name: '국가혁명당',
     color: '#DB2C2B',
+    slogan: '국민 배당금 지급!\n가계부채 탕감!',
   },
   {
     huboid: '100138411',
@@ -47,6 +53,7 @@ export const huboList = [
     name: '이백윤',
     jd_name: '노동당',
     color: '#FF0000',
+    slogan: '계속 이렇게 살거야?\n바꾸고 싶다면 사회주의',
   },
   {
     huboid: '100138489',
@@ -54,6 +61,7 @@ export const huboList = [
     name: '옥은호',
     jd_name: '새누리당',
     color: '#C9252B',
+    slogan: '부정선거 단죄 못하면\n망국의 길로 갑니다’',
   },
   {
     huboid: '100138373',
@@ -61,6 +69,7 @@ export const huboList = [
     name: '김동연',
     jd_name: '새로운물결',
     color: '사퇴',
+    slogan: '기득권 공화국에서\n기회의 나라로',
   },
   {
     huboid: '100138380',
@@ -68,6 +77,7 @@ export const huboList = [
     name: '김경재',
     jd_name: '신자유민주연합',
     color: '#AD469F',
+    slogan: '박근혜 대통령\n 명예회복 민생안정',
   },
   {
     huboid: '100138379',
@@ -75,6 +85,7 @@ export const huboList = [
     name: '조원진',
     jd_name: '우리공화당',
     color: '#009944',
+    slogan: '국민여러분 힘내세요!\n쓰레기 정치 확!',
   },
   {
     huboid: '100138375',
@@ -82,6 +93,7 @@ export const huboList = [
     name: '김재연',
     jd_name: '진보당',
     color: '#D6001C',
+    slogan: '당신의 땀이 빛나도록\n일하는 사람들의 정치혁명',
   },
   {
     huboid: '100138531',
@@ -89,6 +101,7 @@ export const huboList = [
     name: '이경희',
     jd_name: '통일한국당',
     color: '#003793',
+    slogan: '오직 경제, 오직 통일!\n청년사업가, 법학박사',
   },
   {
     huboid: '100138402',
@@ -96,5 +109,6 @@ export const huboList = [
     name: '김민찬',
     jd_name: '한류연합당',
     color: '#733A87',
+    slogan: '국가를 지키고\n국민을 보호하겠습니다',
   },
 ];
