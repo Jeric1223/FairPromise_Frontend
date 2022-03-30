@@ -4,9 +4,10 @@ import Header from '../header/Header';
 import SloganBanner from './sloganBanner/SloganBanner';
 import { huboList } from '../../constance/data';
 import { huboInfo } from '../../constance/huboinfo';
-import HuboInformation from './hunoInformation/HuboInformation';
+import HuboInformation from './huboInformation/HuboInformation';
 import QueryString from 'qs';
 import { throttle } from 'lodash';
+import HuboChangeModal from './huboChangeModal/HuboChangeModal';
 
 const HuboDetail: FC = () => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const HuboDetail: FC = () => {
 
   return (
     <>
+      <HuboChangeModal />
       <Header theme={'black'} zIndex={zIndex}></Header>
       {huboList.map((value, index) => {
         if (String(value.giho) === queryData.id) {
