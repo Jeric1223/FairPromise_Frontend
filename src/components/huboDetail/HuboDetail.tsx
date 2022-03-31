@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { FC, useMemo, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from 'components/header/Header';
@@ -41,11 +42,13 @@ const HuboDetail: FC = () => {
         if (String(value.giho) === queryData.id) {
           return <SloganBanner key={index} huboinfo={value} />;
         }
+        return;
       })}
       {huboInfo.map((value, index) => {
         if (value.GIHO === queryData.id) {
           return <HuboInformation key={index} huboinfo={value} />;
         }
+        return;
       })}
     </>
   );
