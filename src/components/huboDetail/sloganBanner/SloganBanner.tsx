@@ -26,6 +26,13 @@ const SloganBanner: FC<Props> = (props) => {
           <S.HuboImageList giho={giho}>
             <img src={require(`../../../assets/image/${name}.svg`)} alt="후보자 사진" />
           </S.HuboImageList>
+          <button
+            onClick={() => {
+              console.log('click');
+            }}
+          >
+            후보 변경하기
+          </button>
         </S.RightWrapper>
       </S.SloganBannerWrapper>
     </>
