@@ -9,6 +9,7 @@ interface Props {
     jd_name: string;
     color: string;
     slogan: string;
+    report: string;
   };
 }
 
