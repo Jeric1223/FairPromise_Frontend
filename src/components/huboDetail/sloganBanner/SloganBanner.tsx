@@ -1,5 +1,7 @@
 import { FC } from 'react';
 import * as S from './style';
+import { HuboChangeModalIsOpen } from 'module/atom/huboDetail/huboDetail';
+import { useRecoilState } from 'recoil';
 
 interface Props {
   huboinfo: {
@@ -15,6 +17,8 @@ interface Props {
 
 const SloganBanner: FC<Props> = (props) => {
   const { giho, jd_name, color, slogan, name } = props.huboinfo;
+  const [isOpen, setIsOpen] = useRecoilState(HuboChangeModalIsOpen);
+
   return (
     <>
       <S.SloganBannerWrapper color={color}>
@@ -29,7 +33,7 @@ const SloganBanner: FC<Props> = (props) => {
           </S.HuboImageList>
           <button
             onClick={() => {
-              console.log('click');
+              setIsOpen(true);
             }}
           >
             후보 변경하기
