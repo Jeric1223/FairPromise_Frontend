@@ -19,7 +19,7 @@ const HuboInformation: FC<Props> = (props) => {
 
   useEffect(() => {
     setBirthday(birthdaySlice(huboinfo.BIRTHDAY));
-  }, []);
+  }, [huboinfo.BIRTHDAY]);
 
   return (
     <>
