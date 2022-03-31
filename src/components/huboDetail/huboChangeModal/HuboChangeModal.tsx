@@ -5,7 +5,6 @@ const HuboChangeModal: FC = () => {
   return (
     <S.Container>
       <S.Background />
-      
     </S.Container>
   );
 };

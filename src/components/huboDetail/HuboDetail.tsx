@@ -1,13 +1,13 @@
 import { FC, useMemo, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from '../header/Header';
-import SloganBanner from './sloganBanner/SloganBanner';
-import { huboList } from '../../constance/data';
-import { huboInfo } from '../../constance/huboinfo';
-import HuboInformation from './huboInformation/HuboInformation';
+import Header from 'components/header/Header';
+import SloganBanner from 'components/huboDetail/sloganBanner/SloganBanner';
+import { huboList } from 'constance/data';
+import { huboInfo } from 'constance/huboinfo';
+import HuboInformation from 'components/huboDetail/huboInformation/HuboInformation';
+import HuboChangeModal from 'components/huboDetail/huboChangeModal/HuboChangeModal';
 import QueryString from 'qs';
 import { throttle } from 'lodash';
-import HuboChangeModal from './huboChangeModal/HuboChangeModal';
 
 const HuboDetail: FC = () => {
   const location = useLocation();
