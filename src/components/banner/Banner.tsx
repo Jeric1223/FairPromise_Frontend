@@ -21,6 +21,7 @@ const Banner: FC = () => {
   );
 
   useEffect(() => {
+    handlerScroll();
     window.addEventListener('scroll', handlerScroll);
     return () => {
       window.removeEventListener('scroll', handlerScroll);
