@@ -35,6 +35,7 @@ const HuboChangeModal: FC = () => {
             alt="닫기 아이콘"
           />
         </header>
+        <S.HuboListWrapper></S.HuboListWrapper>
       </S.ModalContainer>
     </S.Container>
   ) : (

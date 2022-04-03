@@ -56,3 +56,9 @@ export const ModalContainer = styled.div`
     }
   }
 `;
+
+export const HuboListWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+`;
