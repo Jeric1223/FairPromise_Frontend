@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import * as S from './style';
-import { LogoSvg, LogoBlackSvg } from '../../assets';
+import { LogoSvg, LogoBlackSvg } from 'assets/index';
 import { Link } from 'react-router-dom';
 
 interface Props {

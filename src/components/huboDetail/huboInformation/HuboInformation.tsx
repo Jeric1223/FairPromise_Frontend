@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import * as S from './style';
-import TextDetail from './TextDetail';
+import TextDetail from 'components/huboDetail/huboInformation/TextDetail';
 
 interface Props {
   huboinfo: any;
@@ -19,7 +19,7 @@ const HuboInformation: FC<Props> = (props) => {
 
   useEffect(() => {
     setBirthday(birthdaySlice(huboinfo.BIRTHDAY));
-  }, []);
+  }, [huboinfo.BIRTHDAY]);
 
   return (
     <>

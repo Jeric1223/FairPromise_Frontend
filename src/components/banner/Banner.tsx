@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { FC, useEffect, useMemo, useState } from 'react';
 import * as S from './style';
-import Header from '../header/Header';
+import Header from 'components/header/Header';
 import { throttle } from 'lodash';
 import { Link } from 'react-router-dom';
 
@@ -21,6 +21,7 @@ const Banner: FC = () => {
   );
 
   useEffect(() => {
+    handlerScroll();
     window.addEventListener('scroll', handlerScroll);
     return () => {
       window.removeEventListener('scroll', handlerScroll);
