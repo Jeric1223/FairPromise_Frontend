@@ -3,6 +3,8 @@ import * as S from './style';
 import { HuboChangeModalIsOpen } from 'module/atom/huboDetail/huboDetail';
 import { useRecoilState } from 'recoil';
 import { X_icon } from 'assets/index';
+import { huboList } from 'constance/data';
+import HuboItem from '../huboItem/HuboItem';
 
 const HuboChangeModal: FC = () => {
   const [isOpen, setIsOpen] = useRecoilState(HuboChangeModalIsOpen);
@@ -35,6 +37,11 @@ const HuboChangeModal: FC = () => {
             alt="닫기 아이콘"
           />
         </header>
+        <S.HuboListWrapper>
+          {huboList.map((value, index) => {
+            return <HuboItem data={value} key={index} />;
+          })}
+        </S.HuboListWrapper>
       </S.ModalContainer>
     </S.Container>
   ) : (

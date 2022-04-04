@@ -23,6 +23,9 @@ export const Header = styled.div<Props>`
 
   background-color: ${(props) => (props.theme === 'white' ? 'transparent' : 'white')};
   border-bottom: 2px solid ${(props) => (props.theme === 'black' ? '#272727' : '#ffffff')};
+  -webkit-box-shadow: 0px 3px 5px -2px rgba(122, 122, 122, 0.5);
+  -moz-box-shadow: 0px 3px 5px -2px rgba(122, 122, 122, 0.5);
+  box-shadow: 0px 3px 5px -2px rgba(122, 122, 122, 0.5);
 
   & > a {
     text-decoration: none;

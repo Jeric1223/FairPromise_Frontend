@@ -25,7 +25,7 @@ export const Background = styled.div`
 
 export const ModalContainer = styled.div`
   width: 900px;
-  height: 550px;
+  height: 570px;
   border-radius: 20px;
   background-color: #f1f1f1;
   z-index: 100;
@@ -39,7 +39,7 @@ export const ModalContainer = styled.div`
   & > header {
     box-sizing: border-box;
     width: 100%;
-    height: 80px;
+    height: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,4 +55,14 @@ export const ModalContainer = styled.div`
       cursor: pointer;
     }
   }
+`;
+
+export const HuboListWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 60px;
+  overflow-y: scroll;
+  justify-content: center;
+  margin-bottom: 20px;
 `;
