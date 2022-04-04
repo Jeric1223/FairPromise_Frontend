@@ -30,15 +30,6 @@ export const huboList = [
       'http://elecinfo.nec.go.kr/neweps/viewPdf.do?contentId=2F6570646174612F455032322F45434D323032322F30312F45434D303132303232303030312F45434D303132303232303030315F30303033532E706466&ctl_no_id=ECM01202200010003&epdata_id=ECM101',
   },
   {
-    huboid: '100138392',
-    giho: 4,
-    name: '안철수',
-    jd_name: '국민의당',
-    color: '사퇴',
-    slogan: '과학경제강국\n바르고 깨끗한',
-    report: 'http://elecinfo.nec.go.kr/',
-  },
-  {
     huboid: '100138395',
     giho: 5,
     name: '오준호',
@@ -77,15 +68,6 @@ export const huboList = [
     slogan: '부정선거 단죄 못하면\n망국의 길로 갑니다’',
     report:
       'http://elecinfo.nec.go.kr/neweps/viewPdf.do?contentId=2F6570646174612F455032322F45434D323032322F30312F45434D303132303232303030312F45434D303132303232303030315F30303037532E706466&ctl_no_id=ECM01202200010007&epdata_id=ECM101',
-  },
-  {
-    huboid: '100138373',
-    giho: 9,
-    name: '김동연',
-    jd_name: '새로운물결',
-    color: '사퇴',
-    slogan: '기득권 공화국에서\n기회의 나라로',
-    report: 'http://elecinfo.nec.go.kr/',
   },
   {
     huboid: '100138380',
