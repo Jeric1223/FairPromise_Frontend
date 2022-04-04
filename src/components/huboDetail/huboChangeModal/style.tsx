@@ -61,4 +61,7 @@ export const HuboListWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: 55px 60px;
+  overflow-y: scroll;
+  justify-content: center;
 `;
