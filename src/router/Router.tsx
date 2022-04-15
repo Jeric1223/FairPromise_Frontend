@@ -9,8 +9,8 @@ const Router: FC = (): JSX.Element => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/hubo-detail" element={<HuboDetail />} />
-        <Route path="/hubo-promise" element={<HuboPromise />} />
+        <Route path="/hubo-detail/*" element={<HuboDetail />} />
+        <Route path="/hubo-promise/*" element={<HuboPromise />} />
       </Routes>
     </BrowserRouter>
   );
