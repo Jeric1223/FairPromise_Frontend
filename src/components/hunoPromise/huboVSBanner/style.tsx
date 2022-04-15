@@ -5,16 +5,14 @@ export const BannerMainContainer = styled.div`
   height: 450px;
   display: flex;
   align-items: center;
-`;
+  position: relative;
 
-export const LeftContainer = styled.div<{ color: string }>`
-  width: 50%;
-  height: 100%;
-  background-color: ${(props) => `${props.color}D9`};
-`;
-
-export const RightContainer = styled.div<{ color: string }>`
-  width: 50%;
-  height: 100%;
-  background-color: ${(props) => `${props.color}D9`};
+  & > img {
+    width: 250px;
+    height: 180px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-52%, -27%);
+  }
 `;
