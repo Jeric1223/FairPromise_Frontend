@@ -1,6 +1,15 @@
 import axios from 'axios';
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-export const huboPromiseRequest = () => {
-  return axios.get(`${REACT_APP_API_URL}`);
+console.log(BASE_URL);
+
+export const Request = (url: string) => {
+  return axios
+    .get(`${BASE_URL}${url}`)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err) => {
+      throw err.response;
+    });
 };
