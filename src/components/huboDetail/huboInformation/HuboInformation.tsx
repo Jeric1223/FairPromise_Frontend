@@ -1,8 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import * as S from './style';
 import TextDetail from 'components/huboDetail/huboInformation/TextDetail';
-import { huboPromiseRequest } from 'util/api/huboPromiseApi';
-
 interface Props {
   huboinfo: any;
 }
@@ -21,16 +19,6 @@ const HuboInformation: FC<Props> = (props) => {
   useEffect(() => {
     setBirthday(birthdaySlice(huboinfo.BIRTHDAY));
   }, [huboinfo.BIRTHDAY]);
-
-  useEffect(() => {
-    huboPromiseRequest()
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
 
   return (
     <>
