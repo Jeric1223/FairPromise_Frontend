@@ -13,3 +13,7 @@ export const Request = (url: string) => {
       throw err.response;
     });
 };
+
+/* /hubolist
+/huboinfo
+/field/list */
