@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fonts } from 'styles/theme';
 
 interface StyleProps {
   color: string;
@@ -9,7 +10,7 @@ export const TextContainer = styled.div`
   width: 1250px;
   height: 106px;
   border-bottom: 2px solid black;
-  font-family: 'NanumSquare EB';
+  font-family: ${fonts.NanumEB};
   font-size: 30px;
   justify-content: center;
   align-items: center;
@@ -55,18 +56,18 @@ export const HuboInfomationWrapper = styled.div`
   padding-right: 20px;
 
   & > h1 {
-    font-family: 'NanumSquare EB';
+    font-family: ${fonts.NanumEB};
     font-size: 52px;
   }
 
   & > p {
-    font-family: 'NanumSquare B';
+    font-family: ${fonts.NanumB};
     font-size: 18px;
     padding-top: 12px;
   }
 
   & > h2 {
-    font-family: 'NanumSquare EB';
+    font-family: ${fonts.NanumEB};
     font-size: 44px;
     padding-top: 18px;
   }

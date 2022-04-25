@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Banner, Slide_Type_1 } from '../../assets/index';
+import { fonts } from 'styles/theme';
 
 const BREAK_POINT_MOBILE = 768;
 const BREAK_POINT_TABLET = 992;
@@ -50,7 +51,7 @@ export const SlideContainer = styled.div`
     background-color: #272727;
     border-radius: 7px;
     font-size: 19px;
-    font-family: 'NanumSquare EB';
+    font-family: ${fonts.NanumEB};
     color: #ffffff;
     text-align: center;
 

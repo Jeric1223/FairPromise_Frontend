@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fonts } from 'styles/theme';
 
 interface Props {
   theme: 'string';
@@ -38,7 +39,7 @@ export const Header = styled.div<Props>`
   }
 
   & > a > p {
-    font-family: 'NanumSquare EB';
+    font-family: ${fonts.NanumEB};
     font-size: 20px;
     color: ${(props) => (props.theme === 'white' ? 'white' : 'black')};
   }

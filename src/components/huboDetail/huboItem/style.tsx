@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fonts } from 'styles/theme';
 
 export const HuboItemWrapper = styled.div<{ opacity: number; color: string }>`
   width: 142px;
@@ -15,14 +16,14 @@ export const HuboItemWrapper = styled.div<{ opacity: number; color: string }>`
   }
 
   & > span {
-    font-family: NanumSquare B;
+    font-family: ${fonts.NanumB};
     font-size: 18px;
     color: ${(props) => `${props.color}D9`};
     margin-top: 10px;
   }
 
   & > p {
-    font-family: NanumSquare EB;
+    font-family: ${fonts.NanumEB};
     font-size: 20px;
     margin-top: 4px;
   }
