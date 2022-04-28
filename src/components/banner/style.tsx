@@ -51,9 +51,9 @@ export const SlideContainer = styled.div`
     background-color: #272727;
     border-radius: 7px;
     font-size: 19px;
-    font-family: ${fonts.NanumEB};
     color: #ffffff;
     text-align: center;
+    font-family: ${fonts.NanumEB};
 
     @media only screen and (min-width: ${BREAK_POINT_MOBILE}px) {
       width: 170px;

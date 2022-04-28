@@ -48,8 +48,8 @@ export const ModalContainer = styled.div`
     padding: 0 20px 0 70px;
 
     h3 {
-      font-family: ${fonts.NanumR};
       font-size: 24px;
+      font-family: ${fonts.NanumR};
     }
 
     img {

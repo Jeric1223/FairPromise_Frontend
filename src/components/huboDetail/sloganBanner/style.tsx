@@ -13,9 +13,10 @@ export const SloganBannerWrapper = styled.div<Props>`
   width: 100%;
   height: 450px;
   margin-top: 70px;
-  background-color: ${(props) => `${props.color}D9`};
   display: flex;
   align-items: center;
+
+  background-color: ${(props) => `${props.color}D9`};
 `;
 
 export const LeftWrapper = styled.div`

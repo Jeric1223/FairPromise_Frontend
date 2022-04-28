@@ -10,6 +10,7 @@ export const HeaderParentContainer = styled.div<{ zIndex: number }>`
   height: 70px;
   position: fixed;
   top: 0;
+
   z-index: ${(props) => props.zIndex};
 `;
 
@@ -22,11 +23,12 @@ export const Header = styled.div<Props>`
   cursor: pointer;
   gap: 75px;
 
-  background-color: ${(props) => (props.theme === 'white' ? 'transparent' : 'white')};
-  border-bottom: 2px solid ${(props) => (props.theme === 'black' ? '#272727' : '#ffffff')};
   -webkit-box-shadow: 0px 3px 5px -2px rgba(122, 122, 122, 0.5);
   -moz-box-shadow: 0px 3px 5px -2px rgba(122, 122, 122, 0.5);
   box-shadow: 0px 3px 5px -2px rgba(122, 122, 122, 0.5);
+  
+  background-color: ${(props) => (props.theme === 'white' ? 'transparent' : 'white')};
+  border-bottom: 2px solid ${(props) => (props.theme === 'black' ? '#272727' : '#ffffff')};
 
   & > a {
     text-decoration: none;
@@ -41,6 +43,7 @@ export const Header = styled.div<Props>`
   & > a > p {
     font-family: ${fonts.NanumEB};
     font-size: 20px;
+    
     color: ${(props) => (props.theme === 'white' ? 'white' : 'black')};
   }
 `;
