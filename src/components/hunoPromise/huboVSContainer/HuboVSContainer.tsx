@@ -23,7 +23,21 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
         <S.HuboBannerContainer direction="left" color={color}>
           {huboList.map((item, index) => {
             if (String(item.giho) === giho) {
-              return;
+              return (
+                <>
+                  <S.ImageWrapper direction="left">
+                    <img src={require(`assets/image/${item.name}.svg`)} alt="후보자사진" />
+                    <button>후보 변경하기</button>
+                  </S.ImageWrapper>
+                  <S.TextContainer>
+                    <h1>{item.giho}</h1>
+                    <div>
+                      <h3>{item.jd_name}</h3>
+                      <h2>{item.name}</h2>
+                    </div>
+                  </S.TextContainer>
+                </>
+              );
             } else {
               return;
             }
@@ -33,7 +47,21 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
         <S.HuboBannerContainer direction="right" color={color}>
           {huboList.map((item, index) => {
             if (String(item.giho) === giho) {
-              return;
+              return (
+                <>
+                  <S.TextContainer>
+                    <h1>{item.giho}</h1>
+                    <div>
+                      <h3>{item.jd_name}</h3>
+                      <h2>{item.name}</h2>
+                    </div>
+                  </S.TextContainer>
+                  <S.ImageWrapper direction="right">
+                    <img src={require(`assets/image/${item.name}.svg`)} alt="후보자사진" />
+                    <button>후보 변경하기</button>
+                  </S.ImageWrapper>
+                </>
+              );
             } else {
               return;
             }
