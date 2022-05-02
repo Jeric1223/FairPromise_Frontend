@@ -26,7 +26,7 @@ const Header: FC<Props> = (props) => {
         <Link to="/hubo-detail?id=1">
           <p>후보자 정보보기</p>
         </Link>
-        <Link to="/hubo-promise">
+        <Link to="/hubo-promise?hubo_1=1&hubo_2=2">
           <p>후보자들 공약 비교하기</p>
         </Link>
       </S.Header>
