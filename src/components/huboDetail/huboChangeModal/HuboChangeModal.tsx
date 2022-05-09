@@ -4,7 +4,7 @@ import { HuboChangeModalIsOpen } from 'module/atom/huboDetail/huboDetail';
 import { useRecoilState } from 'recoil';
 import { X_icon } from 'assets/index';
 import { huboList } from 'constance/data';
-import HuboItem from '../huboItem/HuboItem';
+import HuboItem from 'components/huboDetail/huboItem/HuboItem';
 
 const HuboChangeModal: FC = () => {
   const [isOpen, setIsOpen] = useRecoilState(HuboChangeModalIsOpen);
