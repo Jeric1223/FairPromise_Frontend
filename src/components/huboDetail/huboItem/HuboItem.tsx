@@ -50,6 +50,15 @@ const HuboItem: FC<Props> = (props) => {
       <p>{data.name}</p>
     </S.HuboItemWrapper>
   );
+
+  {
+    /* <button
+  style={{ width: '100px', height: '100px' }}
+  onClick={() => {
+    setSearchParams({ hubo_2: '100', hubo_1: `${hubo_1}` });
+  }}
+  ></button> */
+  }
 };
 
 export default HuboItem;
