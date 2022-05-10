@@ -1,33 +1,36 @@
 import { FC } from 'react';
 import * as S from './style';
-import { huboList } from 'constance/data';
+import { strongHubo } from 'constance/strongCandidate';
+import { useSetRecoilState } from 'recoil';
+import { HuboVSHubo1Hubo2, HuboVSModalIsOpen } from 'module/atom/huboDetail/huboDetail';
 
 interface Props {
   color: string;
   giho: string | null;
   direction: string;
 }
-{
-  /* <button
-style={{ width: '100px', height: '100px' }}
-onClick={() => {
-  setSearchParams({ hubo_2: '100', hubo_1: `${hubo_1}` });
-}}
-></button> */
-}
 
 const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
+  const setIsOpen = useSetRecoilState(HuboVSModalIsOpen);
+  const setHubo1Hubo2 = useSetRecoilState(HuboVSHubo1Hubo2);
   return (
     <>
       {direction === 'left' ? (
         <S.HuboBannerContainer direction="left" color={color}>
-          {huboList.map((item, index) => {
+          {strongHubo.map((item, index) => {
             if (String(item.giho) === giho) {
               return (
                 <>
                   <S.ImageWrapper direction="left">
                     <img src={require(`assets/image/${item.name}.svg`)} alt="후보자사진" />
-                    <button>후보 변경하기</button>
+                    <button
+                      onClick={() => {
+                        setIsOpen(true);
+                        setHubo1Hubo2(1);
+                      }}
+                    >
+                      후보 변경하기
+                    </button>
                   </S.ImageWrapper>
                   <S.TextContainer>
                     <h1>{item.giho}</h1>
@@ -39,13 +42,13 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
                 </>
               );
             } else {
-              return;
+              return <></>;
             }
           })}
         </S.HuboBannerContainer>
       ) : (
         <S.HuboBannerContainer direction="right" color={color}>
-          {huboList.map((item, index) => {
+          {strongHubo.map((item, _index) => {
             if (String(item.giho) === giho) {
               return (
                 <>
@@ -58,12 +61,19 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
                   </S.TextContainer>
                   <S.ImageWrapper direction="right">
                     <img src={require(`assets/image/${item.name}.svg`)} alt="후보자사진" />
-                    <button>후보 변경하기</button>
+                    <button
+                      onClick={() => {
+                        setIsOpen(true);
+                        setHubo1Hubo2(2);
+                      }}
+                    >
+                      후보 변경하기
+                    </button>
                   </S.ImageWrapper>
                 </>
               );
             } else {
-              return;
+              return <></>;
             }
           })}
         </S.HuboBannerContainer>
