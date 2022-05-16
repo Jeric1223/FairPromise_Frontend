@@ -2,6 +2,7 @@ import { FC, useState, useMemo, useEffect } from 'react';
 import Header from 'components/header/Header';
 import HuboVSBanner from './huboVSBanner/HuboVSBanner';
 import { throttle } from 'lodash';
+import * as S from './style';
 
 const HuboPromise: FC = () => {
   const [zIndex, setZIndex] = useState(10);
@@ -29,6 +30,9 @@ const HuboPromise: FC = () => {
     <>
       <Header theme="black" zIndex={zIndex} />
       <HuboVSBanner />
+      <S.TextBox>
+        <h1>공약 1:1 비교</h1>
+      </S.TextBox>
     </>
   );
 };
