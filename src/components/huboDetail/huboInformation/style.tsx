@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fonts } from 'styles/theme';
 
 export const FlexCenterWrapper = styled.div`
   width: 100%;
@@ -19,7 +20,7 @@ export const IntroduceLine = styled.header`
   }
 
   & > span {
-    font-family: NanumSquare EB;
+    font-family: ${fonts.NanumEB};
     font-size: 25px;
   }
 `;
@@ -56,12 +57,12 @@ export const TextDetail = styled.div`
   align-items: center;
 
   & > h1 {
-    font-family: NanumSquare B;
+    font-family: ${fonts.NanumB};
     font-size: 22px;
   }
 
   & > p {
-    font-family: NanumSquare R;
+    font-family: ${fonts.NanumR};
     font-size: 22px;
     color: rgba(00, 00, 00, 70%);
     margin-left: 20px;

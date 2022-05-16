@@ -9,9 +9,9 @@ export const HuboItemWrapper = styled.div<{ opacity: number; color: string }>`
   flex-wrap: wrap;
   transition: 0.3s;
   align-items: center;
-  
+
   opacity: ${(props) => (props.opacity === 1 ? '1' : '0.6')};
-  
+
   &:hover {
     opacity: 1;
   }
@@ -39,7 +39,7 @@ export const HuboImageWrapper = styled.div<{ color: string }>`
   justify-content: center;
   align-items: flex-end;
   cursor: pointer;
-  
+
   background-color: ${(props) => `${props.color}D9`};
 
   img {

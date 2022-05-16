@@ -32,7 +32,7 @@ const Banner: FC = () => {
     <S.BannerMainWrapper>
       <Header theme={themeState} zIndex={10} />
       <S.SlideContainer>
-        <Link to="/">
+        <Link to="/hubo-promise?hubo_1=1&hubo_2=2">
           <button>후보자들 공약 비교하기</button>
         </Link>
       </S.SlideContainer>

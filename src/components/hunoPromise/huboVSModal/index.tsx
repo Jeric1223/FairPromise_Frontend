@@ -1,13 +1,14 @@
 import { FC, useEffect } from 'react';
 import * as S from './style';
-import { HuboChangeModalIsOpen } from 'module/atom/huboDetail/huboDetail';
-import { useRecoilState } from 'recoil';
+import { HuboVSModalIsOpen, HuboVSHubo1Hubo2 } from 'module/atom/huboDetail/huboDetail';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { X_icon } from 'assets/index';
-import { huboList } from 'constance/data';
-import HuboItem from 'components/huboDetail/huboItem/HuboItem';
+import { strongHubo } from 'constance/strongCandidate';
+import HuboItem from 'components/hunoPromise/huboItem/index';
 
-const HuboChangeModal: FC = () => {
-  const [isOpen, setIsOpen] = useRecoilState(HuboChangeModalIsOpen);
+const HuboVSModal: FC = () => {
+  const [isOpen, setIsOpen] = useRecoilState(HuboVSModalIsOpen);
+  const isHubo1Hubo2 = useRecoilValue(HuboVSHubo1Hubo2);
 
   useEffect(() => {
     onScollBlock();
@@ -38,8 +39,8 @@ const HuboChangeModal: FC = () => {
           />
         </header>
         <S.HuboListWrapper>
-          {huboList.map((value, index) => {
-            return <HuboItem data={value} key={index} />;
+          {strongHubo.map((value, index) => {
+            return <HuboItem data={value} isHubo1Hubo2={isHubo1Hubo2} key={index} />;
           })}
         </S.HuboListWrapper>
       </S.ModalContainer>
@@ -49,4 +50,4 @@ const HuboChangeModal: FC = () => {
   );
 };
 
-export default HuboChangeModal;
+export default HuboVSModal;

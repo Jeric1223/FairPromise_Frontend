@@ -26,7 +26,7 @@ export const Background = styled.div`
 
 export const ModalContainer = styled.div`
   width: 900px;
-  height: 570px;
+  height: 400px;
   border-radius: 20px;
   background-color: #f1f1f1;
   z-index: 100;
@@ -63,7 +63,6 @@ export const HuboListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 40px 60px;
-  overflow-y: scroll;
   justify-content: center;
   margin-bottom: 20px;
 `;
