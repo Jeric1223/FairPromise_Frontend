@@ -14,3 +14,8 @@ export const HuboVSHubo1Hubo2 = atom({
   key: 'HuboVSHubo1Hubo2Atom',
   default: 0,
 });
+
+export const IsChangeHubo = atom({
+  key: 'IsChangeHuboAtom',
+  default: 0,
+});

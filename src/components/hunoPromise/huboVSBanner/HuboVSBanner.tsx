@@ -5,23 +5,24 @@ import { VS } from 'assets/index';
 import { strongHubo } from 'constance/strongCandidate';
 import * as S from './style';
 import HuboVSModal from 'components/hunoPromise/huboVSModal/index';
+import { useRecoilValue } from 'recoil';
+import { IsChangeHubo } from 'module/atom/huboDetail/huboDetail';
 
 interface Props {}
 
 const HuboVSBanner: FC<Props> = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [reverse, setReverse] = useState(false);
+  const isChangeHubo = useRecoilValue(IsChangeHubo);
 
-  const hubo_1 = searchParams.get('hubo_1');
-  const hubo_2 = searchParams.get('hubo_2');
+  let hubo_1 = searchParams.get('hubo_1');
+  let hubo_2 = searchParams.get('hubo_2');
 
   useEffect(() => {
-    console.log(hubo_1, hubo_2);
     if (hubo_1 > hubo_2) {
-      console.log('reverse');
       setReverse(true);
     }
-  }, [hubo_1, hubo_2, searchParams]);
+  }, [hubo_1, hubo_2, searchParams, isChangeHubo]);
 
   return (
     <>

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import * as S from './style';
 import { strongHubo } from 'constance/strongCandidate';
 import { useSetRecoilState } from 'recoil';
-import { HuboVSHubo1Hubo2, HuboVSModalIsOpen } from 'module/atom/huboDetail/huboDetail';
+import { HuboVSHubo1Hubo2, HuboVSModalIsOpen, IsChangeHubo } from 'module/atom/huboDetail/huboDetail';
 
 interface Props {
   color: string;
@@ -13,6 +13,8 @@ interface Props {
 const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
   const setIsOpen = useSetRecoilState(HuboVSModalIsOpen);
   const setHubo1Hubo2 = useSetRecoilState(HuboVSHubo1Hubo2);
+  const setIsChangeHubo = useSetRecoilState(IsChangeHubo);
+
   return (
     <>
       {direction === 'left' ? (
@@ -27,6 +29,8 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
                       onClick={() => {
                         setIsOpen(true);
                         setHubo1Hubo2(1);
+                        const rand1 = Math.random();
+                        setIsChangeHubo(rand1);
                       }}
                     >
                       후보 변경하기
@@ -65,6 +69,8 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
                       onClick={() => {
                         setIsOpen(true);
                         setHubo1Hubo2(2);
+                        const rand1 = Math.random();
+                        setIsChangeHubo(rand1); 
                       }}
                     >
                       후보 변경하기
