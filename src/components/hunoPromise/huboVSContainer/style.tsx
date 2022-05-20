@@ -6,6 +6,7 @@ export const HuboBannerContainer = styled.div<{ color: string; direction: string
   height: 100%;
   display: flex;
   align-items: center;
+  transition: 0.4s;
 
   background-color: ${(props) => `${props.color}D9`};
   justify-content: ${(props) => (props.direction === 'left' ? 'flex-start' : 'flex-end')};
