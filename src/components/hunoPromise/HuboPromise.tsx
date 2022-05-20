@@ -1,6 +1,7 @@
 import { FC, useState, useMemo, useEffect } from 'react';
 import Header from 'components/header/Header';
 import HuboVSBanner from './huboVSBanner/HuboVSBanner';
+import HuboPromiseDropBox from './huboPromiseDropBox/HuboPromiseDropBox';
 import { throttle } from 'lodash';
 import * as S from './style';
 
@@ -33,6 +34,9 @@ const HuboPromise: FC = () => {
       <S.TextBox>
         <h1>공약 1:1 비교</h1>
       </S.TextBox>
+      <S.PromiseFlexBox>
+        <HuboPromiseDropBox />
+      </S.PromiseFlexBox>
     </>
   );
 };
