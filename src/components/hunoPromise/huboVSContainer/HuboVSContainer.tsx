@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import React from 'react';
 import * as S from './style';
 import { strongHubo } from 'constance/strongCandidate';
 import { useSetRecoilState } from 'recoil';
@@ -22,7 +23,7 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
           {strongHubo.map((item, index) => {
             if (String(item.giho) === giho) {
               return (
-                <>
+                <React.Fragment key={index}>
                   <S.ImageWrapper direction="left">
                     <img src={require(`assets/image/${item.name}.svg`)} alt="후보자사진" />
                     <button
@@ -43,7 +44,7 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
                       <h2>{item.name}</h2>
                     </div>
                   </S.TextContainer>
-                </>
+                </React.Fragment>
               );
             } else {
               return <></>;
@@ -52,10 +53,10 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
         </S.HuboBannerContainer>
       ) : (
         <S.HuboBannerContainer direction="right" color={color}>
-          {strongHubo.map((item, _index) => {
+          {strongHubo.map((item, index) => {
             if (String(item.giho) === giho) {
               return (
-                <>
+                <React.Fragment key={index}>
                   <S.TextContainer>
                     <h1>{item.giho}</h1>
                     <div>
@@ -70,13 +71,13 @@ const HuboVSContainer: FC<Props> = ({ color, giho, direction }) => {
                         setIsOpen(true);
                         setHubo1Hubo2(2);
                         const rand1 = Math.random();
-                        setIsChangeHubo(rand1); 
+                        setIsChangeHubo(rand1);
                       }}
                     >
                       후보 변경하기
                     </button>
                   </S.ImageWrapper>
-                </>
+                </React.Fragment>
               );
             } else {
               return <></>;
