@@ -3,9 +3,7 @@ export const promiseData = [
     candidate1: {
       id: '1',
       name: '이재명',
-      img_url: '/resources/images/candidate1.jpg',
       party: '더불어 민주당',
-      count: '6,7,6,8,4,4,4,2',
       promise: {
         a1: '-',
         a2: '<p>-한반도 평화 경제 체제 수립</p><p>-한반도 평화 프로세스 계승</p><p>-유엔 제재 면제 사업 우선 추진</p>',
@@ -59,9 +57,7 @@ export const promiseData = [
     candidate2: {
       id: '2',
       name: '윤석열',
-      img_url: '/resources/images/candidate2.jpg',
       party: '국민의힘',
-      count: '6,7,6,8,4,4,4,2',
       promise: {
         a1: '<p>-사드 기지 정상화</p><p>-한미 동맹 재건 위해 한미 연합 연습, 야외 기동 훈련 정상 시행</p><p>-자위권 차원에서 직접 사드 구매, 추가 배치해 수도권과 경기 북부 지역 확실하게 보호</p>',
         a2: '<p>-북한 비핵화 실질적 진전 없으므로 시기상조</p><p>-북한 비핵화 불가역적 진전있을 시 협력 관계 수립</p>',
@@ -115,9 +111,7 @@ export const promiseData = [
     candidate3: {
       id: '3',
       name: '심상정',
-      img_url: '/resources/images/candidate3.jpg',
       party: '정의당',
-      count: '6,7,6,8,4,4,4,2',
       promise: {
         a1: '-',
         a2: '<p>-평화선언 통해 비핵화 이뤄내야</p>',
@@ -171,9 +165,7 @@ export const promiseData = [
     candidate4: {
       id: '4',
       name: '안철수',
-      img_url: '/resources/images/candidate4.jpg',
       party: '국민의당',
-      count: '6,7,6,8,4,4,4,2',
       promise: {
         a1: '<p>-대중국 3불 정책(추가 사드 배치·미국 중심의 미사일 방어 체계·한미일 군사 협력) 폐지</p><p>-수도권 보호하기 위해 사드 추가 배치보다 한국형 미사일 방어 체계 먼저 구축해야</p><p>-사드 추가 배치·미국 미사일 방어 체계 참여·한미일 군사 동맹화 3가지 않는 3불 정책 반대</p>',
         a2: '<p>-종전 선언에 목 매기 보다 경계 태세 다잡고 장병 격려</p><p>-종전 선언은 북한 비핵화의 한 과정</p><p>-북한 비핵화 의지 밝히고 행동하지 않는 이상 종전 선언하지 않을 것</p>',
