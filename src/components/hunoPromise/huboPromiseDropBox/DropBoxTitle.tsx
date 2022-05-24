@@ -3,27 +3,36 @@ import styled from 'styled-components';
 import { AarowICON } from 'assets/index';
 import { fonts } from 'styles/theme';
 
-interface Props {}
+interface Props {
+  setIsOpenDropBox: (value: boolean) => void;
+  isOpenDropBox: boolean;
+  title: string;
+  index: number;
+}
 
-const DropBoxTitle: FC<Props> = () => {
+const DropBoxTitle: FC<Props> = ({ setIsOpenDropBox, isOpenDropBox, title, index }) => {
   return (
-    <DropBoxTitleWrapper>
+    <DropBoxTitleWrapper isOpenDropBox={isOpenDropBox}>
       <div className="numBox">
-        <span>1</span>
+        <span>{index}</span>
       </div>
-      <h1>타이틀</h1>
+      <h1>{title}</h1>
       <img
         src={AarowICON}
         alt="화살표이미지"
         onClick={() => {
-          console.log(`dropBox click`);
+          if (isOpenDropBox === true) {
+            setIsOpenDropBox(false);
+          } else {
+            setIsOpenDropBox(true);
+          }
         }}
       />
     </DropBoxTitleWrapper>
   );
 };
 
-const DropBoxTitleWrapper = styled.header`
+const DropBoxTitleWrapper = styled.header<{ isOpenDropBox: boolean }>`
   width: 100%;
   height: 64px;
   display: flex;
@@ -31,8 +40,11 @@ const DropBoxTitleWrapper = styled.header`
   box-sizing: border-box;
   padding: 0 30px 0 30px;
   align-items: center;
-  border-top: solid 3px #00000065;
-  border-bottom: solid 3px #00000065;
+
+  &:nth-of-type(1) {
+    border-top: solid 2px #00000065;
+  }
+  border-bottom: solid 2px #00000065;
 
   .numBox {
     width: 32px;
@@ -56,6 +68,8 @@ const DropBoxTitleWrapper = styled.header`
     width: 30px;
     height: 30px;
     cursor: pointer;
+    transition: 0.2s;
+    transform: ${(props) => props.isOpenDropBox === true && 'rotate(0.5turn)'};
   }
 `;
 
