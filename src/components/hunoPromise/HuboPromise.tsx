@@ -3,6 +3,7 @@ import Header from 'components/header/Header';
 import HuboVSBanner from './huboVSBanner/HuboVSBanner';
 import HuboPromiseDropBox from './huboPromiseDropBox/HuboPromiseDropBox';
 import { throttle } from 'lodash';
+import { huboPromiseFieldListTest } from 'constance/huboPromiseFieldList';
 import * as S from './style';
 
 const HuboPromise: FC = () => {
@@ -35,7 +36,9 @@ const HuboPromise: FC = () => {
         <h1>공약 1:1 비교</h1>
       </S.TextBox>
       <S.PromiseFlexBox>
-        <HuboPromiseDropBox />
+        {huboPromiseFieldListTest[0].map((item, index) => {
+          return <HuboPromiseDropBox title={item.title} list={item.list} index={index + 1} key={index} />;
+        })}
       </S.PromiseFlexBox>
     </>
   );
