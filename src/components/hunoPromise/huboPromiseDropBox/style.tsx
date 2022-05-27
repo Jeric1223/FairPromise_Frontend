@@ -3,16 +3,17 @@ import { fonts } from 'styles/theme';
 
 export const PromiseFlexBox = styled.div<{ isOpenDropBox: boolean }>`
   width: 100%;
+  height: ${({ isOpenDropBox }) => (isOpenDropBox ? 'auto' : 0)};
   display: flex;
   flex-direction: column;
   overflow: ${(props) => props.isOpenDropBox === false && 'hidden'};
-  transition: 0.3s;
 `;
 
 export const PromiseWrapper = styled.div<{ isOpenDropBox: boolean }>`
   display: flex;
-  height: ${(props) => (props.isOpenDropBox === true ? '160px' : '0')};
   transition: 0.5s;
+  border-bottom: 1px solid;
+  min-height: 160px;
 `;
 
 export const FieldListBox = styled.div`
@@ -25,11 +26,11 @@ export const FieldListBox = styled.div`
   & > div {
     width: 100%;
     height: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    padding: 30px 0;
 
     span {
       font-size: 2rem;
@@ -40,12 +41,18 @@ export const FieldListBox = styled.div`
 
 const SidePromiseWrapper = styled.div`
   width: 42%;
-  height: 100%;
   background-color: #f6f6f6;
   display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  justify-content: center;
   box-sizing: border-box;
+  padding: 30px 0;
+
+  & > p {
+    font-family: ${fonts.NanumEB};
+    font-size: 20px;
+    padding: 0 0 5px 20px;
+  }
 `;
 
 export const LightSidePromiseWrapper = styled(SidePromiseWrapper)``;
