@@ -1,15 +1,22 @@
 import styled from 'styled-components';
 import { fonts } from 'styles/theme';
 
-export const HuboBannerContainer = styled.div<{ color: string; direction: string }>`
+export const HuboBannerContainer = styled.div<{ color: string }>`
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   transition: 0.4s;
+`;
 
+export const HuboBannerLeftContainer = styled(HuboBannerContainer)`
+  justify-content: flex-start;
   background-color: ${(props) => `${props.color}D9`};
-  justify-content: ${(props) => (props.direction === 'left' ? 'flex-start' : 'flex-end')};
+`;
+
+export const HuboBannerRightContainer = styled(HuboBannerContainer)`
+  flex-direction: row-reverse;
+  background-color: ${(props) => `${props.color}D9`};
 `;
 
 export const ImageWrapper = styled.div<{ direction: string }>`
