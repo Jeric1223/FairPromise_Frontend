@@ -1,12 +1,12 @@
 import { FC, useEffect, useState } from 'react';
-import HuboVSContainer from '../huboVSContainer/HuboVSContainer';
 import { useSearchParams } from 'react-router-dom';
 import { VS } from 'assets/index';
-import { strongHubo } from 'constance/strongCandidate';
 import * as S from './style';
 import HuboVSModal from 'components/hunoPromise/huboVSModal/index';
 import { useRecoilValue } from 'recoil';
 import { IsChangeHubo } from 'module/atom/huboDetail/huboDetail';
+import LeftVSContainer from '../huboVSContainer/LeftVSContainer';
+import RightVSContainer from '../huboVSContainer/RightVSContainer';
 
 interface Props {}
 
@@ -27,16 +27,9 @@ const HuboVSBanner: FC<Props> = () => {
   return (
     <>
       <HuboVSModal />
-      <S.BannerMainContainer reverse={reverse}>
-        {strongHubo.map((item, index) => {
-          if (String(item.giho) === hubo_1) {
-            return <HuboVSContainer color={item.color} giho={hubo_1} direction={'left'} key={index} />;
-          } else if (String(item.giho) === hubo_2) {
-            return <HuboVSContainer color={item.color} giho={hubo_2} direction={'right'} key={index} />;
-          } else {
-            return <></>;
-          }
-        })}
+      <S.BannerMainContainer>
+        <LeftVSContainer giho={hubo_1} />
+        <RightVSContainer giho={hubo_2} />
         <img src={VS} alt="VS_image" />
       </S.BannerMainContainer>
     </>
