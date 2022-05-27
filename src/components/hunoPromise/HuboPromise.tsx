@@ -37,7 +37,15 @@ const HuboPromise: FC = () => {
       </S.TextBox>
       <S.PromiseFlexBox>
         {huboPromiseFieldListTest[0].map((item, index) => {
-          return <HuboPromiseDropBox title={item.title} list={item.list} index={index + 1} key={index} />;
+          return (
+            <HuboPromiseDropBox
+              title={item.title}
+              list={item.list}
+              promise={item.promise}
+              index={index + 1}
+              key={index}
+            />
+          );
         })}
       </S.PromiseFlexBox>
     </>
