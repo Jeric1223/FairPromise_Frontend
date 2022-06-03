@@ -5,3 +5,4 @@ export { default as Slide_Type_1 } from './image/slide1.svg';
 export { default as X_icon } from './image/X-icon.svg';
 export { default as VS } from './image/VS.svg';
 export { default as AarowICON } from './image/arrowIcon.svg';
+export { default as DocumentIcon } from './image/document.svg';
