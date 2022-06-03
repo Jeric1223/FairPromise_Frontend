@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fonts } from 'styles/theme';
 
 interface StyleProps {
   color: string;
@@ -9,10 +10,18 @@ export const TextContainer = styled.div`
   width: 1250px;
   height: 106px;
   border-bottom: 2px solid black;
-  font-family: 'NanumSquare EB';
-  font-size: 30px;
+  font-family: ${fonts.NanumEB};
+  font-size: 1.875rem;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 1270px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 809px) {
+    width: 357px;
+    min-width: 357px;
+  }
 `;
 
 export const HuboListFlexContainer = styled.div`
@@ -22,6 +31,12 @@ export const HuboListFlexContainer = styled.div`
   flex-wrap: wrap;
   gap: 50px 100px;
   margin-bottom: 50px;
+  transition: 0.4s;
+
+  @media screen and (max-width: 1270px) {
+    width: 100%;
+    justify-content: space-around;
+  }
 `;
 
 export const HuboListContainer = styled.div<StyleProps>`
@@ -30,6 +45,7 @@ export const HuboListContainer = styled.div<StyleProps>`
   border-radius: 6px;
   border: 5px solid ${(props) => props.color};
   display: flex;
+  transition: 0.5s;
   cursor: pointer;
 `;
 
@@ -55,18 +71,18 @@ export const HuboInfomationWrapper = styled.div`
   padding-right: 20px;
 
   & > h1 {
-    font-family: 'NanumSquare EB';
+    font-family: ${fonts.NanumEB};
     font-size: 52px;
   }
 
   & > p {
-    font-family: 'NanumSquare B';
+    font-family: ${fonts.NanumB};
     font-size: 18px;
     padding-top: 12px;
   }
 
   & > h2 {
-    font-family: 'NanumSquare EB';
+    font-family: ${fonts.NanumEB};
     font-size: 44px;
     padding-top: 18px;
   }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fonts } from 'styles/theme';
 
 interface Props {
   color: string;
@@ -12,9 +13,10 @@ export const SloganBannerWrapper = styled.div<Props>`
   width: 100%;
   height: 450px;
   margin-top: 70px;
-  background-color: ${(props) => `${props.color}D9`};
   display: flex;
   align-items: center;
+
+  background-color: ${(props) => `${props.color}D9`};
 `;
 
 export const LeftWrapper = styled.div`
@@ -22,14 +24,14 @@ export const LeftWrapper = styled.div`
   height: 100%;
   overflow: hidden;
   p {
-    font-family: Typo_S;
+    font-family: ${fonts.TypoS};
     font-size: 3.875rem;
     text-align: center;
     color: white;
     margin-top: 50px;
   }
   h1 {
-    font-family: Typo_S;
+    font-family: ${fonts.TypoS};
     white-space: pre-wrap;
     font-size: 5.5rem;
     text-align: center;
@@ -43,7 +45,7 @@ export const RightWrapper = styled.div<gihoProps>`
   height: 100%;
   position: relative;
   & > h1 {
-    font-family: Typo_S;
+    font-family: ${fonts.TypoS};
     font-size: ${(props) => (props.giho >= 10 ? '22rem' : '25rem')};
     position: absolute;
     display: inline;
@@ -59,7 +61,7 @@ export const RightWrapper = styled.div<gihoProps>`
     border-radius: 18px;
     font-size: 22px;
     color: white;
-    font-family: NanumSquare EB;
+    font-family: ${fonts.NanumEB};
     transition: 0.2s;
     z-index: 100;
     position: absolute;

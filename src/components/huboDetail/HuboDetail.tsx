@@ -11,9 +11,10 @@ import QueryString from 'qs';
 import { throttle } from 'lodash';
 
 const HuboDetail: FC = () => {
+  const [zIndex, setZIndex] = useState(10);
+
   const location = useLocation();
   const queryData = QueryString.parse(location.search, { ignoreQueryPrefix: true });
-  const [zIndex, setZIndex] = useState(10);
 
   const handlerScroll = useMemo(
     () =>
@@ -46,7 +47,7 @@ const HuboDetail: FC = () => {
       })}
       {huboInfo.map((value, index) => {
         if (value.GIHO === queryData.id) {
-          return <HuboInformation key={index} huboinfo={value} />;
+          return <HuboInformation key={index} huboinfo={value} huboReport={huboList[index].report} />;
         }
         return;
       })}

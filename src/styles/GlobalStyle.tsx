@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     width: 100%;
     min-width: 768px;
+    font-size: 15px;
+
+    @media screen and (max-width: 900px){
+      font-size: 13px;
+    }
   } 
   button {
     background: inherit;

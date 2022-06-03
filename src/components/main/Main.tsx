@@ -6,13 +6,13 @@ import HuboListContainer from './huboInfomation/HuboListContainer';
 
 const Main: FC = () => {
   return (
-    <>
+    <S.Main>
       <Banner />
       <S.MainArticleContainer>
         <HuboInfomation />
         <HuboListContainer />
       </S.MainArticleContainer>
-    </>
+    </S.Main>
   );
 };
 
