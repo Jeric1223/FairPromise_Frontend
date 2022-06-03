@@ -45,8 +45,12 @@ export const HuboListContainer = styled.div<StyleProps>`
   border-radius: 6px;
   border: 5px solid ${(props) => props.color};
   display: flex;
-  transition: 0.5s;
   cursor: pointer;
+  transition: transform 0.3s ease 0s;
+
+  &:hover {
+    transform: scale(1.025);
+  }
 `;
 
 export const HuboImageWrapper = styled.div`
