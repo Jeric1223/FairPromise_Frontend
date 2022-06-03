@@ -14,3 +14,10 @@ export const TextBox = styled.div`
     font-size: 2rem;
   }
 `;
+
+export const PromiseFlexBox = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;

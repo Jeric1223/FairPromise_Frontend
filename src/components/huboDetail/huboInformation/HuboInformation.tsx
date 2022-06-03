@@ -1,12 +1,15 @@
 import { FC, useEffect, useState } from 'react';
 import * as S from './style';
 import TextDetail from 'components/huboDetail/huboInformation/TextDetail';
+import { DocumentIcon } from 'assets/index';
+
 interface Props {
   huboinfo: any;
+  huboReport: string;
 }
 
 const HuboInformation: FC<Props> = (props) => {
-  const { huboinfo } = props;
+  const { huboinfo, huboReport } = props;
   const [birthday, setBirthday] = useState<string>('');
 
   const birthdaySlice = (string: string) => {
@@ -38,6 +41,12 @@ const HuboInformation: FC<Props> = (props) => {
           </S.TextFlexBox>
           <div id="line" />
         </S.InfomationContainer>
+        <S.ReportBox>
+          <a rel="noopener noreferrer" target="_blank" href={huboReport}>
+            <img src={DocumentIcon} alt="책자형 공보 보러가기" />
+            <p>책자형 선거공보</p>
+          </a>
+        </S.ReportBox>
       </S.FlexCenterWrapper>
     </>
   );

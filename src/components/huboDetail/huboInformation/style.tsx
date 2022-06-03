@@ -6,12 +6,65 @@ export const FlexCenterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  a > button {
+    width: 228px;
+    height: 47px;
+    background-color: black;
+    border-radius: 18px;
+    font-size: 22px;
+    color: white;
+    font-family: ${fonts.NanumEB};
+    transition: 0.2s;
+    position: absolute;
+  }
+`;
+
+export const ReportBox = styled.div`
+  width: 150px;
+  height: 154px;
+  border-radius: 17px;
+  background-color: #f4f5fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 206px;
+  top: 144px;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+  }
+  a:hover {
+    color: #a00;
+  }
+
+  a > img {
+    width: 70px;
+    height: 70px;
+  }
+
+  a > p {
+    font-family: ${fonts.NanumEB};
+    font-size: 20px;
+    color: #000000;
+    margin-top: 10px;
+  }
 `;
 
 export const IntroduceLine = styled.header`
   width: 1250px;
   margin-top: 70px;
-
   & > div {
     width: 100%;
     height: 6px;
