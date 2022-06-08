@@ -31,8 +31,13 @@ export const ReportBox = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 206px;
-  top: 144px;
+  right: 90px;
+  top: 24%;
+  transition: transform 0.3s ease 0s;
+
+  &:hover {
+    transform: scale(1.025);
+  }
 
   a {
     display: flex;
