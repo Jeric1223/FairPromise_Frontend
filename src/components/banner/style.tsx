@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Banner, Slide_Type_1 } from '../../assets/index';
+import { fonts } from 'styles/theme';
 
-const BREAK_POINT_MOBILE = 768;
+const BREAK_POINT_MOBILE = 800;
 const BREAK_POINT_TABLET = 992;
 const BREAK_POINT_PC = 1300;
 
@@ -28,36 +29,50 @@ export const SlideContainer = styled.div`
   position: relative;
   min-width: 768px;
 
-  @media only screen and (min-width: ${BREAK_POINT_MOBILE}px) {
+  @media screen and (max-width: ${BREAK_POINT_MOBILE}px) {
     width: 768px;
     height: 199px;
   }
-  @media only screen and (min-width: ${BREAK_POINT_TABLET}px) {
+
+  @media screen and (mix-width: ${BREAK_POINT_MOBILE}px) {
+    width: 768px;
+    height: 199px;
+  }
+
+  @media screen and (max-width: ${BREAK_POINT_TABLET}px) {
+    width: 884px;
+    height: 228px;
+  }
+
+  @media screen and (min-width: ${BREAK_POINT_TABLET}px) {
     width: 993px;
     height: 256px;
   }
-  @media only screen and (min-width: ${BREAK_POINT_PC}px) {
+
+  @media screen and (min-width: ${BREAK_POINT_PC}px) {
     width: 1250px;
     height: 323px;
   }
 
   & > a > button {
     width: 207px;
-    bottom: 10%;
-    right: 42%;
     position: absolute;
     height: 40px;
     background-color: #272727;
     border-radius: 7px;
     font-size: 19px;
-    font-family: 'NanumSquare EB';
     color: #ffffff;
     text-align: center;
+    font-family: ${fonts.NanumEB};
+    bottom: 15px;
+    right: 42%;
 
     @media only screen and (min-width: ${BREAK_POINT_MOBILE}px) {
       width: 170px;
       height: 30px;
       font-size: 15px;
+      /* bottom: 15px;
+      left: 348px; */
     }
     @media only screen and (min-width: ${BREAK_POINT_TABLET}px) {
       width: 172px;

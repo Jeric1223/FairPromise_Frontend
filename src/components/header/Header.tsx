@@ -23,10 +23,10 @@ const Header: FC<Props> = (props) => {
             <img src={LogoBlackSvg} alt="공정한 공약 로고" />
           </Link>
         )}
-        <Link to="/">
+        <Link to="/hubo-detail?id=1">
           <p>후보자 정보보기</p>
         </Link>
-        <Link to="/">
+        <Link to="/hubo-promise?hubo_1=1&hubo_2=2">
           <p>후보자들 공약 비교하기</p>
         </Link>
       </S.Header>
