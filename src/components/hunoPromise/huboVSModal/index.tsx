@@ -26,7 +26,11 @@ const HuboVSModal: FC = () => {
 
   return isOpen ? (
     <S.Container>
-      <S.Background />
+      <S.Background
+        onClick={() => {
+          setIsOpen(false);
+        }}
+      />
       <S.ModalContainer>
         <header>
           <h3>후보자 목록</h3>
