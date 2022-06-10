@@ -12,7 +12,16 @@ interface Props {
 
 const DropBoxTitle: FC<Props> = ({ setIsOpenDropBox, isOpenDropBox, title, index }) => {
   return (
-    <DropBoxTitleWrapper isOpenDropBox={isOpenDropBox}>
+    <DropBoxTitleWrapper
+      isOpenDropBox={isOpenDropBox}
+      onClick={() => {
+        if (isOpenDropBox === true) {
+          setIsOpenDropBox(false);
+        } else {
+          setIsOpenDropBox(true);
+        }
+      }}
+    >
       <div className="numBox">
         <span>{index}</span>
       </div>
@@ -40,6 +49,7 @@ const DropBoxTitleWrapper = styled.header<{ isOpenDropBox: boolean }>`
   box-sizing: border-box;
   padding: 0 30px 0 30px;
   align-items: center;
+  cursor: pointer;
 
   &:nth-of-type(1) {
     border-top: solid 2px #00000065;
