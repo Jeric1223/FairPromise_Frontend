@@ -37,7 +37,7 @@ export const huboList = [
     color: '#19233C',
     slogan: '누구나 기본소득\n나답게 대한민국',
     report:
-      'http://elecinfo.nec.go.kr/neweps/viewPdf.do?contentId=2F6570646174612F455032322F45434D323032322F30312F45434D303132303232303030312F45434D303132303232303030315F30303034532E706466&ctl_no_id=ECM01202200010004&epdata_id=ECM101',
+      'http://elecinfo.nec.go.kr/neweps/ezpdfwebviewer/ezpdf/customLayout.jsp?contentId=2F6570646174612F455032322F45434D323032322F30312F45434D303132303232303030312F45434D303132303232303030315F30303034532E706466',
   },
   {
     huboid: '100138378',
