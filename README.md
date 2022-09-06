@@ -1,7 +1,6 @@
 ![image](https://user-images.githubusercontent.com/67368704/160507782-be1b0f69-cd1b-44b4-89ff-4458c036b3b0.png)
 
-https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b44c753c-2f1e-4360-b121-c49a37377a7b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220906T004337Z&X-Amz-Expires=86400&X-Amz-Signature=9689397b54bc9c2427c44a2bd740edb979fe26c48176a7f3375296e3f481e899&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject![image](https://user-images.githubusercontent.com/67368704/188524538-c4ff61c3-ba97-4161-862d-7a5a87111eeb.png)
-
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b44c753c-2f1e-4360-b121-c49a37377a7b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220906T004337Z&X-Amz-Expires=86400&X-Amz-Signature=9689397b54bc9c2427c44a2bd740edb979fe26c48176a7f3375296e3f481e899&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 ---
 
 ## 웹사이트 바로가기 : https://main.d24uwp2x7uoia2.amplifyapp.com/
