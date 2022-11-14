@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC, useState } from 'react';
 import * as S from './style';
 import DropBoxTitleWrapper from './DropBoxTitle';
