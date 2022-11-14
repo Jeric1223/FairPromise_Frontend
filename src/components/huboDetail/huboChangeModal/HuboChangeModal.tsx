@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { FC, useEffect } from 'react';
 import * as S from './style';
 import { HuboChangeModalIsOpen } from 'module/atom/huboDetail/huboDetail';
