@@ -1,17 +1,45 @@
-![image](https://user-images.githubusercontent.com/67368704/160507782-be1b0f69-cd1b-44b4-89ff-4458c036b3b0.png)
+# 공정한 공약 (FairPromise)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b44c753c-2f1e-4360-b121-c49a37377a7b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220906T004337Z&X-Amz-Expires=86400&X-Amz-Signature=9689397b54bc9c2427c44a2bd740edb979fe26c48176a7f3375296e3f481e899&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
----
+**대통령 후보들의 공약을 분야별로 나란히 놓고 비교하는 웹사이트입니다.**
 
-## 웹사이트 바로가기 : https://fair-promise.netlify.app
+[![웹사이트 바로가기](https://img.shields.io/badge/웹사이트_바로가기-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://fair-promise.netlify.app)
 
-## 배경 
-최근 대통령 선거를 통해서 많은 사람이 후보자들에 대한 정보를 다양한 매체에서 습득하고 있다. 하지만 다양한 매체를 통해 정보를 얻을 때 정치적으로 편향적인 정보들을 인식하지 못하고 이해하는 문제가 발생하고 있다. 특히 공정성이 강조되는 선거에서는 더욱 중요한 문제이기도 하다. 다양한 매체 중 책자형 선거공보가 있다. 책자형 선거공보로 공약을 보게 된다면 주관적이고 편향적인 디자인, 문구로 인해 객관적으로 공약 정보들을 확인할 수 없을 수 있다. 그리고 같은 분야의 공약을 다른 대선후보와 직접적으로 비교하며 보기 어려운 점이 있다. 역대 정권 중 공약 이행률이 50%를 넘은 정부는 단 한곳도 없다. 그래서인지 ‘대권 주자들이 내놓는 말을 믿는 사람이 더 이상한 대선판’이란 뼈 때리는 비판이 나오고 있다.
+![공정한 공약 스크린샷](https://user-images.githubusercontent.com/67368704/160507782-be1b0f69-cd1b-44b4-89ff-4458c036b3b0.png)
 
-### 사용 기술
+## 왜 만들었나
 
-- Typescript, React, Recoil, Python, BeautifulSoup, AWS Amplify
+선거 때 유권자가 공약을 접하는 경로 중 하나가 책자형 선거공보입니다. 그런데 이 방식에는 두 가지 문제가 있습니다.
 
-### 개발 기간
+**첫째, 디자인과 문구 자체가 설득 도구입니다.** 후보 캠프가 만든 자료라 강조하고 싶은 것만 크게 보이고, 객관적으로 내용만 비교하기 어렵습니다.
 
-- 2022.03 ~ 2022.6. (3개월)
+**둘째, 같은 분야의 공약을 후보끼리 직접 견줄 수 없습니다.** 후보별로 자료가 따로 있어서, "부동산 공약이 어떻게 다른가"를 보려면 사람이 직접 옮겨 적어가며 대조해야 합니다.
+
+역대 정권 중 공약 이행률이 50%를 넘은 곳이 한 곳도 없다는 점을 생각하면, 공약을 **편향 없이, 분야별로 나란히** 놓고 볼 수 있는 창구가 필요하다고 봤습니다. 그래서 선거공보 데이터를 수집해 후보·분야 기준으로 재배치했습니다.
+
+## 구성
+
+| | 내용 |
+| :--- | :--- |
+| **메인** | 후보 목록과 진입점 |
+| **후보 상세** | 후보 한 명의 프로필과 공약 전체 |
+| **공약 비교** | 같은 분야의 공약을 후보별로 나란히 배치 |
+
+데이터는 Python과 BeautifulSoup으로 선거공보에서 수집해 정제한 뒤 프론트엔드에서 소비합니다. 이 저장소는 **프론트엔드**입니다.
+
+## 기술
+
+`TypeScript` `React` `Recoil` `styled-components` `axios` · 배포 `AWS Amplify` → `Netlify`
+
+전역 상태는 Recoil로 관리합니다. 후보와 분야라는 두 축을 여러 화면이 공유하는 구조라, 화면 간 prop 전달보다 전역 상태가 맞다고 판단했습니다.
+
+## 개발 기간
+
+2022.03 ~ 2022.06 (3개월)
+
+## 실행
+
+```bash
+npm install
+npm start        # http://localhost:3000
+npm run build
+```
