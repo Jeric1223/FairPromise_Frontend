@@ -4,7 +4,7 @@
 
 [![웹사이트 바로가기](https://img.shields.io/badge/웹사이트_바로가기-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://fair-promise.netlify.app)
 
-![공정한 공약 스크린샷](https://user-images.githubusercontent.com/67368704/160507782-be1b0f69-cd1b-44b4-89ff-4458c036b3b0.png)
+[![공정한 공약 메인 화면](./docs/hero.jpg)](./docs/hero.jpg)
 
 ## 왜 만들었나
 
